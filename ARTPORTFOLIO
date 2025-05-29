@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio | Your Name</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--dark);
+            padding: 1rem 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1600x900/?art');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .artwork {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .artwork:hover {
+            transform: translateY(-10px);
+        }
+        
+        .artwork img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .artwork-info {
+            padding: 1rem;
+            background: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .profile-img {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        textarea {
+            height: 150px;
+        }
+        
+        button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #c0392b;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ROUGE</h1>
+        <p>Visual Artist | Illustrator | Pixel Artist</p>
+    </header>
+    
+    <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Expressing Through Colors</h1>
+            <p>Discover my world of creativity and imagination</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <section id="gallery">
+            <h2>My Artworks</h2>
+            <div class="gallery">
+                <div class="artwork">
+                    <img src="https://www.instagram.com/p/DIJiCm7y3Bh/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Artwork 1">
+                    <div class="artwork-info">
+                        <h3>A little try at Digital Art</h3>
+                        <p>Medibang Paint Pro</p>
+                    </div>
+                </div>
+                
+                <div class="artwork">
+                    <img src="https://www.instagram.com/p/DExKttNSJgm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Artwork 2">
+                    <div class="artwork-info">
+                        <h3>Claude Monet Painting Study</h3>
+                        <p>Watercolor and Gouache</p>
+                    </div>
+                </div>
+                
+                <div class="artwork">
+                    <img src="https://www.instagram.com/p/DHYgTAjSI5C/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Artwork 3">
+                    <div class="artwork-info">
+                        <h3>Kiki's Delivery Service Fan-art</h3>
+                        <p>Acrylic Marker</p>
+                    </div>
+                </div>
+                
+                <div class="artwork">
+                    <img src="https://www.instagram.com/p/C7I7lyCLb1U/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Artwork 4">
+                    <div class="artwork-info">
+                        <h3>Some Color Study</h3>
+                        <p>Traditional Art, Markers</p>
+                    </div>
+                </div>
+                
+                <div class="artwork">
+                    <img src="https://www.instagram.com/reel/DHyQ2gvisGv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Artwork 5">
+                    <div class="artwork-info">
+                        <h3>Pixel Art project</h3>
+                        <p>Made in Aseprite</p>
+                    </div>
+                </div>
+                
+                <div class="artwork">
+                    <img src="https://www.instagram.com/p/DHGP7-KyhGn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Artwork 6">
+                    <div class="artwork-info">
+                        <h3>Doodle Arts</h3>
+                        <p>Scribbler Pen Set</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Growing up, seeing different colors inspired me to be an artist. Although some days may be mundane, it never stopped me from seeing the good things in life. Being an artist means being understandable of emotions and also facing burnouts.</p>
+                    
+                    <p>Albeit not really starting as a good watercolor and marker user at first, I learned so much via books and experiences. Majority of my inspirations came from range of retro drawings, colorful doodles, impressionism/post-impressionism, and old-school anime.</p>
+                    
+                    <p>Oh, and sometimes, I do some pixel art and other digital animations, which are what I am currently trying to apply to some of my stuff.</p>
+                    
+                    <h3>My Principles</h3>
+                    <p>There are so many ways to consider when making art, such as how you start and how you end. At the process, never leave it as it is if you feel like there's something good to add on the concept.</p>
+                    
+                    <p>Making art is like building a structure, you first need to figure out its mould first before the final appearance or aesthetic.</p>
+                </div>
+                
+                <div class="profile-img">
+                    <img src="https://www.instagram.com/p/C73hNYTPAJP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Artist Profile">
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; Rouge. All rights reserved.</p>
+        <p>Follow me on <a href="#" style="color: var(--light);">Instagram</a> | <a href="#" style="color: var(--light);">Behance</a> | <a href="#" style="color: var(--light);">ArtStation</a></p>
+    </footer>
+</body>
+</html>
